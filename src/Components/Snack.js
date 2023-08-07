@@ -16,7 +16,7 @@ function Snack({ snack }) {
         </a>
       </td>
       <td>
-        <Link to={`/bookmarks/${snack.id}`}>✏️</Link>
+        <Link to={`/snacks/${snack.id}`}>✏️</Link>
       </td>
     </tr>
   );

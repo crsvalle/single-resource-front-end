@@ -60,7 +60,7 @@ function SnackNewForm() {
           placeholder="http://"
           onChange={handleTextChange}
         />
-        <label htmlFor="type">Category:</label>
+        <label htmlFor="type">Type:</label>
         <input
           id="type"
           type="text"

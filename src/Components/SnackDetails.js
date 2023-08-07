@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 
 function SnackDetails() {
-  const [snack, setSnack] = useState([]);
+  const [snack, setSnack] = useState({});
   let { id } = useParams();
   let navigate = useNavigate();
   const API = process.env.REACT_APP_API_URL;
@@ -20,28 +20,29 @@ function SnackDetails() {
       .then(() => {
         navigate(`/snacks`);
       })
-      .catch((c) => console.error("catch", c));
+      .catch((error) => console.error("Error deleting snack:", error));
   };
 
   const handleDelete = () => {
     deleteSnack();
   };
-  
+
   return (
     <>
       <article>
         <h3>
           {snack.is_favorite ? <span>⭐️</span> : null} {snack.name}
         </h3>
+        <img src={snack.image} alt={snack.name} width="300" height="200" />
         <h5>
-          <span>
-            <a href={snack.url}>{snack.name}</a>
-          </span>{" "}
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          {snack.url}
+          <span>Serving: {snack.serving}g</span>
         </h5>
+        <p>
+          <strong>Protein:</strong> {snack.protein}g | <strong>Sugar:</strong>{" "}
+          {snack.sugar}g | <strong>Sodium:</strong> {snack.sodium}mg |{" "}
+          <strong>Fat:</strong> {snack.fat}g
+        </p>
         <h6>{snack.type}</h6>
-        <p>{snack.serving}</p>
         <div className="showNavigation">
           <div>
             {" "}
@@ -64,3 +65,4 @@ function SnackDetails() {
 }
 
 export default SnackDetails;
+
