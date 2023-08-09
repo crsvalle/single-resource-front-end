@@ -1,35 +1,29 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import ModalWin from "./ModalWin";
+const API = process.env.REACT_APP_API_URL;
 
 function SnackDetails() {
   const [snack, setSnack] = useState({});
+  const [modal, setModal] = useState(false  )
   let { id } = useParams();
   let navigate = useNavigate();
-  const API = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     axios.get(`${API}/snacks/${id}`).then((response) => {
       setSnack(response.data);
     });
-  }, [id, navigate, API]);
+  }, [id, navigate]);
 
-  const deleteSnack = () => {
-    axios
-      .delete(`${API}/snacks/${id}`)
-      .then(() => {
-        navigate(`/snacks`);
-      })
-      .catch((error) => console.error("Error deleting snack:", error));
-  };
-
-  const handleDelete = () => {
-    deleteSnack();
-  };
+  function handleModal(){
+    setModal(true)
+  }
 
   return (
     <>
       <article>
+      {modal ? <ModalWin id={id} setModal={setModal} /> :null}
         <h3>
           {snack.is_favorite ? <span>⭐️</span> : null} {snack.name}
         </h3>
@@ -56,7 +50,7 @@ function SnackDetails() {
             </Link>
           </div>
           <div>
-            <button onClick={handleDelete}>Delete</button>
+            <button onClick={handleModal}>Delete</button>
           </div>
         </div>
       </article>
