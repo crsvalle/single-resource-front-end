@@ -1,8 +1,11 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+
 import ModalWin from "./ModalWin";
 const API = process.env.REACT_APP_API_URL;
+import "./SnackDetails.css"; 
+
 
 function SnackDetails() {
   const [snack, setSnack] = useState({});
@@ -20,14 +23,28 @@ function SnackDetails() {
     setModal(true)
   }
 
+  const isHighIn = (value, threshold) => {
+    return value > threshold;
+  };
+
   return (
     <>
       <article>
       {modal ? <ModalWin id={id} setModal={setModal} /> :null}
+
+      <article
+        className={`${
+          isHighIn(snack.sugar, 15) ? "high-sugar" : ""
+        } ${isHighIn(snack.protein, 5) ? "high-protein" : ""}`}
+      >
+      {modal ? <ModalWin id={id} setModal={setModal} /> :null}
+
         <h3>
           {snack.is_favorite ? <span>⭐️</span> : null} {snack.name}
         </h3>
-        <img src={snack.image} alt={snack.name} width="300" height="200" />
+        <div className="image-container">
+          <img src={snack.image} alt={snack.name} className="snack-image" />
+        </div>
         <h5>
           <span>Serving: {snack.serving}g</span>
         </h5>
@@ -59,4 +76,6 @@ function SnackDetails() {
 }
 
 export default SnackDetails;
+
+
 
