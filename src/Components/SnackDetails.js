@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 
 import ModalWin from "./ModalWin";
-const API = process.env.REACT_APP_API_URL;
 import "./SnackDetails.css"; 
+const API = process.env.REACT_APP_API_URL;
 
 
 function SnackDetails() {
@@ -29,9 +29,6 @@ function SnackDetails() {
 
   return (
     <>
-      <article>
-      {modal ? <ModalWin id={id} setModal={setModal} /> :null}
-
       <article
         className={`${
           isHighIn(snack.sugar, 15) ? "high-sugar" : ""
