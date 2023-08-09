@@ -6,6 +6,17 @@ const API = process.env.REACT_APP_API_URL;
 
 function SnackNewForm() {
   let navigate = useNavigate();
+  const [snack, setSnack] = useState({
+    name: "",
+    image: "",
+    serving: 0,
+    protein: 0,
+    sugar: 0,
+    sodium: 0,
+    fat: 0  ,
+    type: "",
+    is_favorite: false,
+  });
 
   const addSnack = (newSnack) => {
     axios
@@ -19,17 +30,6 @@ function SnackNewForm() {
       .catch((c) => console.warn("catch", c));
   };
 
-  const [snack, setSnack] = useState({
-    name: "",
-    image: "",
-    serving: 0,
-    protein: 0,
-    sugar: 0,
-    sodium: 0,
-    fat: 0,
-    type: "",
-    is_favorite: false,
-  });
 
   const handleTextChange = (event) => {
     setSnack({ ...snack, [event.target.id]: event.target.value });
