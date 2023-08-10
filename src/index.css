@@ -14,3 +14,16 @@ code {
 
 
 
+table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+}
+tbody tr:nth-child(odd) {
+  background: rgb(106, 99, 99);
+  color: white;
+}

@@ -15,6 +15,10 @@ function Snack({ snack }) {
           {snack.name}
         </a>
       </td>
+      <td>{snack.protein}g</td>
+      <td>{snack.sugar}g</td>
+      <td>{snack.sodium}mg</td>
+      <td>{snack.type}</td>
       <td>
         <Link to={`/snacks/${snack.id}`}>✏️</Link>
       </td>
