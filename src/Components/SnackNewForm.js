@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./SnackNewForm.css"; 
 
 const API = process.env.REACT_APP_API_URL;
 
