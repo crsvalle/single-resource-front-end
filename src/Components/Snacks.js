@@ -6,6 +6,7 @@ const API = process.env.REACT_APP_API_URL;
 
 function Snacks() {
   const [snacks, setSnacks] = useState([]);
+  const [toggle, setToggle] = useState(0)
 
   useEffect(() => {
     axios
@@ -18,33 +19,42 @@ function Snacks() {
     setSnacks([...snacks
       .map((e)=>e)
       .sort((a,b) => a.type !== b.type ? a.type < b.type ? -1: 1 :0)]);
+    setToggle(1)
   };
   
   function sortByProtein(){
     setSnacks([...snacks
       .map((e)=>e)
       .sort((a,b) => {return b.protein - a.protein;})]);
+    setToggle(2)
   };
 
   function sortBySugar(){
     setSnacks([...snacks
       .map((e)=>e)
       .sort((a,b) => {return b.sugar - a.sugar;})]);
+    setToggle(3)
   };
   
   function sortBySodium(){
     setSnacks([...snacks
       .map((e)=>e)
       .sort((a,b) => {return b.sodium - a.sodium;})]);
+    setToggle(4)
   };
 
   return (
     <div className="Snacks">
       <section>
-        <button onClick={sortByType}>Sort by Type</button>
-        <button onClick={sortByProtein}>Sort by Protein</button>
-        <button onClick={sortBySugar}>Sort by Sugar</button>
-        <button onClick={sortBySodium}>Sort by Sodium</button>
+        <div className="sort">
+          <div></div>
+          <div>
+            <button className="sortButton" onClick={sortByType} style={toggle == 1 ? {backgroundColor:"black", color:"white"}:{}}>Sort by Type</button>
+            <button className="sortButton sortProtein" onClick={sortByProtein} style={toggle == 2 ? {backgroundColor:"black", color:"white"}:{}}>Sort by Protein</button>
+            <button className="sortButton sortSugar" onClick={sortBySugar} style={toggle == 3 ? {backgroundColor:"black", color:"white"}:{}}>Sort by Sugar</button>
+            <button className="sortButton" onClick={sortBySodium} style={toggle == 4 ? {backgroundColor:"black", color:"white"}:{}}>Sort by Sodium</button>
+          </div>
+        </div>
         <table>
           <thead>
             <tr>
