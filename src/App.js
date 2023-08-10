@@ -12,12 +12,14 @@ import Show from "./Pages/Show";
 // COMPONENTS
 import NavBar from "./Components/NavBar";
 
+import "./App.css"
+
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <Router>
         <NavBar />
-        <main>
+        <main className="App">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/snacks" element={<Index />} />
