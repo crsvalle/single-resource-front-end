@@ -12,6 +12,7 @@
   .New form {
     display: grid;
     gap: 10px;
+    padding-right: 10px;
   }
   
   .New label {

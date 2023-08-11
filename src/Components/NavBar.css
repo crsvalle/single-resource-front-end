@@ -4,6 +4,7 @@ nav{
     background-color: grey;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 50px;
 }
 .navItems{
     display: flex;
@@ -34,10 +35,10 @@ nav{
 }
 
 .link:hover{
-    background-color: #3e8341;
+    background-color: darkgray;
 }
 .link:active{
-    background-color: #3e8341;
+    background-color: darkgray;
     box-shadow: 0 5px #666;
     color: black;
 }

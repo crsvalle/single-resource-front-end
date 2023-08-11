@@ -1,0 +1,15 @@
+.editForm{
+    display: flex;
+}
+
+.Edit{
+    max-width: 80% !important;
+  }
+
+.form{
+    width: 70%; 
+}
+
+.nvmButton{
+    margin-top: 10px;
+}
