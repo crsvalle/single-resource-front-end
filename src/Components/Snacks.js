@@ -62,6 +62,7 @@ function Snacks() {
               <th>Snack Name</th>
               <th>Protein</th>
               <th>Sugar</th>
+              <th>Fat</th>
               <th>Sodium</th>
               <th>Type</th>
               <th>See this snack !</th>
