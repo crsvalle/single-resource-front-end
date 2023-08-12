@@ -11,7 +11,7 @@ export default function NavBar() {
           <Link className="link" to="/snacks">Snacks</Link>
         </div>
       </div>
-      <h1 style={{color:"white"}}>SnackApp</h1>
+      <h1 style={{color:"white"}}>SnackApp</h1> 
       <button className="navButton">
           <Link className="link" to="/snacks/new">New Snack</Link>
       </button>

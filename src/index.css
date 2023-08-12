@@ -22,9 +22,15 @@ table {
 td {
   text-align: center;
 }
+
 tbody tr:nth-child(odd) {
   background: rgb(106, 99, 99);
   color: white;
+}
+
+tbody tr:nth-child(even) {
+  background: rgb(125, 118, 119);
+  color: black;
 }
 
 .sort{
@@ -54,4 +60,8 @@ tbody tr:nth-child(odd) {
 
 .sortSugar{
   border-right: 1px solid black;
+}
+
+.fontNum{
+  text-shadow: 0px 1px 2px black;
 }
