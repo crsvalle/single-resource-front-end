@@ -52,6 +52,7 @@ function SnackEditForm() {
     event.preventDefault();
     updateSnack(snack, id);
   };
+
   return (
     <div className="editForm">
         <div>

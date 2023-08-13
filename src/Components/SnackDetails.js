@@ -9,12 +9,13 @@ const API = process.env.REACT_APP_API_URL;
 
 function SnackDetails() {
   const [snack, setSnack] = useState({});
-  const [modal, setModal] = useState(false  )
+  const [modal, setModal] = useState(false)
+  const [amount, setAmount] = useState(1);
   let { id } = useParams();
   let navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`${API}/snacks/${id}`).then((response) => {
+    axios.get(`${API}/snacks/${id}`).then((response) => { 
       setSnack(response.data);
     });
   }, [id, navigate]);
@@ -27,11 +28,25 @@ function SnackDetails() {
     return value > threshold;
   };
 
+  useEffect(() =>{
+    for (let x = 1; x<1000; x++){
+      if (x * snack.sugar >= 36){
+        setAmount(x);
+        break;
+      }
+      else if ( x * snack.sodium >= 450){
+        setAmount(x);
+        break;
+      }
+    }
+  })
+  
+
   return (
     <>
       <article
         className={`${
-          isHighIn(snack.sugar, 15) ? "high-sugar" : ""
+          isHighIn(snack.sugar, 10) ? "high-sugar" : ""
         } ${isHighIn(snack.protein, 5) ? "high-protein" : ""}`}
       >
       {modal ? <ModalWin id={id} setModal={setModal} /> :null}
@@ -43,7 +58,7 @@ function SnackDetails() {
           <img src={snack.image} alt={snack.name} className="snack-image" />
         </div>
         <h5>
-          <span>Serving: {snack.serving}g</span>
+          <span>Serving Size: {snack.serving}g</span>
         </h5>
         <p>
           <strong>Protein:</strong> {snack.protein}g | <strong>Sugar:</strong>{" "}
@@ -51,6 +66,12 @@ function SnackDetails() {
           <strong>Fat:</strong> {snack.fat}g
         </p>
         <h6>{snack.type}</h6>
+
+        {amount == 1 ? 
+        <p className="desc"> This snack becomes unhealthy after <strong>{amount}</strong> serving because it reaches an unhealthy amount of {snack.sugar * amount >= 36 && snack.sodium * amount >= 450 ?"sugar and sodium" : snack.sugar >= 36 ? "sugar": "sodium"}.</p>
+        :
+        <p className="desc">This snack becomes unhealthy after <strong>{amount}</strong> servings because it reaches an unhealthy amount of {snack.sugar * amount >= 36 && snack.sodium * amount >= 450 ?"sugar and sodium" :snack.sugar >= 36 ? "sugar": "sodium"}.</p>}
+
         <div className="showNavigation">
           <div>
             {" "}
@@ -58,13 +79,15 @@ function SnackDetails() {
               <button>Back</button>
             </Link>
           </div>
-          <div>
-            <Link to={`/snacks/${id}/edit`}>
-              <button>Edit</button>
-            </Link>
-          </div>
-          <div>
-            <button onClick={handleModal}>Delete</button>
+          <div className="buttons">
+            <div className="editButton">
+              <Link to={`/snacks/${id}/edit`}>
+                <button>Edit</button>
+              </Link>
+            </div>
+            <div>
+              <button onClick={handleModal}>Delete</button>
+            </div>
           </div>
         </div>
       </article>
