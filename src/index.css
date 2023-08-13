@@ -74,3 +74,7 @@ tbody tr:nth-child(even) {
   padding: 10px;
   background-color: whitesmoke;
 }
+
+.home{
+  margin-bottom: 50px;
+}
