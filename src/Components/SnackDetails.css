@@ -5,6 +5,7 @@ article {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    margin-bottom: 50px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -42,7 +43,7 @@ article {
   h6 {
     margin-top: 0;
     font-size: 18px;
-    color: whitesmoke;
+    color: black;
   }
   
   .showNavigation {
@@ -67,7 +68,7 @@ article {
   }
   
   /* Highlight style for snacks high in sugar */
-  .high-sugar {
+  /* .high-sugar {
     background-color: red;
     color: #fff;
   }
@@ -75,7 +76,7 @@ article {
   .high-protein {
     background-color: blue;
     color: white;
-  }
+  } */
 
 
 .image-container {
@@ -93,3 +94,16 @@ article {
   }
   
   
+  .desc{
+    margin-top: -23px;
+    margin-bottom: 20px;
+  }
+
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .editButton{
+    margin-right: 4px;
+  }
