@@ -60,7 +60,7 @@ function Snack({ snack }) {
       </td>
       <td>{snack.type}</td>
       <td>
-        <Link to={`/snacks/${snack.id}`}>✏️</Link>
+        <Link to={`/snacks/${snack.id}`}>👀</Link>
       </td>
     </tr>
   );

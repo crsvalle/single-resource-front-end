@@ -43,6 +43,13 @@ function Snacks() {
     setToggle(4)
   };
 
+  function sortByFat(){
+    setSnacks([...snacks
+      .map((e)=>e)
+      .sort((a,b) => {return b.fat - a.fat;})]);
+    setToggle(5)
+  };
+
   return (
     <div className="Snacks">
       <section>
@@ -52,7 +59,8 @@ function Snacks() {
             <button className="sortButton" onClick={sortByType} style={toggle === 1 ? {backgroundColor:"black", color:"white"}:{}}>Sort by Type</button>
             <button className="sortButton sortProtein" onClick={sortByProtein} style={toggle === 2 ? {backgroundColor:"black", color:"white"}:{}}>Sort by Protein</button>
             <button className="sortButton sortSugar" onClick={sortBySugar} style={toggle === 3 ? {backgroundColor:"black", color:"white"}:{}}>Sort by Sugar</button>
-            <button className="sortButton" onClick={sortBySodium} style={toggle === 4 ? {backgroundColor:"black", color:"white"}:{}}>Sort by Sodium</button>
+            <button className="sortButton sortSodium" onClick={sortBySodium} style={toggle === 4 ? {backgroundColor:"black", color:"white"}:{}}>Sort by Sodium</button>
+            <button className="sortButton" onClick={sortByFat} style={toggle === 5 ? {backgroundColor:"black", color:"white"}:{}}>Sort by Fat</button>
           </div>
         </div>
         <table>
