@@ -1,6 +1,6 @@
 # The Snack App
 
-In this project, you can look at a list of snacks and check their nutritent information. From that information you can see if your favorite foods are good to have in moderate amounts. 
+In this project, you can look at a list of snacks and check their nutrient information. From that information you can see if your favorite foods are good to have in moderate amounts. 
 
 ## Installation
 
