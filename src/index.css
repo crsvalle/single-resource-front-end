@@ -78,3 +78,27 @@ tbody tr:nth-child(even) {
 .home{
   margin-bottom: 50px;
 }
+
+.searchBar{
+  align-items: center;
+  border-radius: 80px;
+  padding: 10px;
+  width: 100%;
+}
+
+@media screen and (min-width:601px) and (max-width: 1000px){
+  
+  .searchBar{width: 80%;
+  margin-right: 100px;}
+
+}
+
+@media screen and (max-width: 600px){
+  
+  .sort{
+    flex-direction: column;
+  }
+  .searchBar{
+    margin-bottom: 40px;
+  }
+}

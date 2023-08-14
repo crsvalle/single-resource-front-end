@@ -38,6 +38,9 @@ function SnackDetails() {
         setAmount(x);
         break;
       }
+      else if (x === 1000){
+        setAmount(0)
+      }
     }
   }, [snack.sugar, snack.sodium]);
   
