@@ -6,7 +6,7 @@ function Home() {
         
         <div>
           <p>This is a snack nutritional information center </p>
-          <p>We have the important macronutrients revolving all types of snacks. If their isn't a snack you are looking for, you could always add it.</p>
+          <p>We have the important macronutrients revolving all types of snacks. If there isn't a snack you are looking for, you could always add it.</p>
         </div>
 
         <div className="bottomBox">

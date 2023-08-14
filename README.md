@@ -10,6 +10,9 @@ Use the package manager [npm](https://www.npmjs.com/) to install packages.
 npm install
 ```
 
+## Live Demo
+Backend repository: [Link](https://github.com/crsvalle/single-resource-back-end)
+
 ## Built with
 ![Static Badge](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge)
 
@@ -20,10 +23,16 @@ npm install
 ![Static Badge](https://img.shields.io/badge/Express.js-d?style=for-the-badge&logo=express&logoColor=%23000000&color=yellow)
 
 
-## Future Features
+### Stretch Features
+* Sorting feature for different data types
+* Search function to find specific snack
+* Modal Window for deletion
+
+### Future Features
 * Add tags to snack (chocolate, cupcake, nuts, etc)
 * Add more data types to each snack
 * Add a calculation to show how many servings it takes for an item to be considered unhealthy.
+
 
 ## Authors
 
