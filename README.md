@@ -14,7 +14,7 @@ npm install
 
 [Snack App](https://cosmic-pavlova-317973.netlify.app/snacks)
 
-Backend Server: (Link)[https://snacks-deploy.onrender.com/]
+Backend Server: [Link](https://snacks-deploy.onrender.com/)
 Backend repository: [Link](https://github.com/crsvalle/single-resource-back-end)
 
 
