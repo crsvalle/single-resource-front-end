@@ -61,7 +61,7 @@ function SnackNewForm() {
           id="image"
           type="text"
           pattern="http[s]*://.+"
-          required
+          
           value={snack.image}
           placeholder="http://"
           onChange={handleTextChange}
