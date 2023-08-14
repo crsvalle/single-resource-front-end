@@ -10,11 +10,13 @@ Use the package manager [npm](https://www.npmjs.com/) to install packages.
 npm install
 ```
 
-## Live Demo &nbsp;&nbsp;[![Netlify Status](https://api.netlify.com/api/v1/badges/ca46b07c-53fe-4657-a74e-448c44960c70/deploy-status)](https://app.netlify.com/sites/cosmic-pavlova-317973/deploys)
+## Live Demo &nbsp;&nbsp;[![Netlify Status](https://api.netlify.com/api/v1/badges/ca46b07c-53fe-4657-a74e-448c44960c70/deploy-status)]
 
 [Snack App](https://cosmic-pavlova-317973.netlify.app/snacks)
 
+Backend Server: (Link)[https://snacks-deploy.onrender.com/]
 Backend repository: [Link](https://github.com/crsvalle/single-resource-back-end)
+
 
 ## Built with
 ![Static Badge](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge)
@@ -24,6 +26,7 @@ Backend repository: [Link](https://github.com/crsvalle/single-resource-back-end)
 ![Static Badge](https://img.shields.io/badge/Node.js-d?style=for-the-badge&logo=nodedotjs&logoColor=%23339933&color=green)
 
 ![Static Badge](https://img.shields.io/badge/Express.js-d?style=for-the-badge&logo=express&logoColor=%23000000&color=yellow)
+
 
 
 ### Stretch Features
