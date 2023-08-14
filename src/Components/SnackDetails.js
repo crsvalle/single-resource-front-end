@@ -39,7 +39,7 @@ function SnackDetails() {
         break;
       }
     }
-  })
+  }, [snack.sugar, snack.sodium]);
   
 
   return (
@@ -67,7 +67,7 @@ function SnackDetails() {
         </p>
         <h6>{snack.type}</h6>
 
-        {amount == 1 ? 
+        {amount === 1 ? 
         <p className="desc"> This snack becomes unhealthy after <strong>{amount}</strong> serving because it reaches an unhealthy amount of {snack.sugar * amount >= 36 && snack.sodium * amount >= 450 ?"sugar and sodium" : snack.sugar >= 36 ? "sugar": "sodium"}.</p>
         :
         <p className="desc">This snack becomes unhealthy after <strong>{amount}</strong> servings because it reaches an unhealthy amount of {snack.sugar * amount >= 36 && snack.sodium * amount >= 450 ?"sugar and sodium" :snack.sugar >= 36 ? "sugar": "sodium"}.</p>}
