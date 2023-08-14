@@ -10,7 +10,10 @@ Use the package manager [npm](https://www.npmjs.com/) to install packages.
 npm install
 ```
 
-## Live Demo
+## Live Demo &nbsp;&nbsp;[![Netlify Status](https://api.netlify.com/api/v1/badges/ca46b07c-53fe-4657-a74e-448c44960c70/deploy-status)](https://app.netlify.com/sites/cosmic-pavlova-317973/deploys)
+
+[Snack App](https://cosmic-pavlova-317973.netlify.app/snacks)
+
 Backend repository: [Link](https://github.com/crsvalle/single-resource-back-end)
 
 ## Built with
